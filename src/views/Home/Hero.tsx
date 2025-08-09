@@ -17,12 +17,12 @@ const Hero = () => {
         <div>
         
            <h2 className="md:text-5xl text-4xl leading-tight lg:w-110">
-            <span className="text-orange-500">Built For Aussie  </span>{" "}
-            <span className="text-blue-900">  Industries That Are Scaling Fast</span>
+            <span className="text-black">Built For <span className="text-orange-600"> Aussie Industries </span> </span>{" "}
+            <span className="text-black"> That Are  <span className="text-orange-600"> Scaling Fast</span></span>
           </h2>
   <p className="text-gray-500 text-[18px] lg:text-[18px] mt-4 lg:max-w-[500px]">
-  Whether you’re running a digital agency, growing a retail brand, or streamlining back-office
-  support—we’ll help you build the offshore team to get it done.
+{`  Whether you’re running a digital agency, growing a retail brand, or streamlining back-office
+  support—we’ll help you build the offshore team to get it done.`}
 </p>
    <button className="mt-6 text-[16px] bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-medium">
             Explore More Industries
