@@ -16,18 +16,19 @@ const Hero = () => {
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
         <div>
         
-           <h2 className="md:text-5xl text-4xl leading-tight lg:w-110">
+           <h2 className="md:text-5xl text-4xl lg:w-110 md:leading-[48px] leading-[44px]">
             <span className="text-black">Built For <span className="text-orange-600"> Aussie Industries </span> </span>{" "}
             <span className="text-black"> That Are  <span className="text-orange-600"> Scaling Fast</span></span>
           </h2>
-  <p className="text-gray-500 text-[18px] lg:text-[18px] mt-4 lg:max-w-[500px]">
+  <p className="text-gray-500 text-[16px] md:text-[18px] mt-4 lg:max-w-[500px]">
 {`  Whether you’re running a digital agency, growing a retail brand, or streamlining back-office
   support—we’ll help you build the offshore team to get it done.`}
 </p>
-   <button className="mt-6 text-[16px] bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-medium">
+   <button className="mt-6 md:text-[18px] text-[15px] bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 rounded-md font-medium">
             Explore More Industries
-          </button>
-        </div>
+          </button>            
+        </div>            
+         
 
 
          <div>
@@ -45,28 +46,33 @@ const Hero = () => {
               </span>
             </div>
             {openSections.includes(0) && (
-           <div className="flex flex-wrap  gap-3 mt-4">
-  <span className="flex items-center gap-2 bg-orange-500 text-white pl-1 pr-4 py-1 rounded-full">
-    <span className="bg-white rounded-full h-8 w-9 flex items-center justify-center">
-      <FaUser className="text-black w-4 h-4" />
+     <div className="flex flex-wrap gap-3 mt-4">
+  {/* Admin */}
+  <span className="flex items-center bg-orange-500 text-white rounded-full pl-2 pr-8 py-1.5">
+    <span className="bg-white rounded-full flex items-center justify-center h-8 w-8">
+      <FaUser className="text-black w-5 h-5" />
     </span>
-    Admin
+    <span className="ml-2 text-base font-medium">Admin</span>
   </span>
 
-  <span className="flex items-center gap-2 bg-orange-500 text-white pl-1 pr-4 rounded-full">
-    <span className="bg-white rounded-full h-8 w-9 flex items-center justify-center">
-      <FaCog className="text-black w-4 h-4" />
+  {/* Operations */}
+  <span className="flex items-center bg-orange-500 text-white rounded-full pl-2 pr-8 py-1.5">
+    <span className="bg-white rounded-full flex items-center justify-center h-8 w-8">
+      <FaCog className="text-black w-5 h-5" />
     </span>
-    Operations
+    <span className="ml-2 text-base font-medium">Operations</span>
   </span>
 
-  <span className="flex items-center gap-2 bg-orange-500 text-white pl-1 pr-4  rounded-full">
-    <span className="bg-white rounded-full h-8 w-9 flex items-center justify-center">
-      <FaBook className="text-black w-4 h-4" />
+  {/* Bookkeeping */}
+  <span className="flex items-center bg-orange-500 text-white rounded-full pl-2 pr-8 py-1.5">
+    <span className="bg-white rounded-full flex items-center justify-center h-8 w-8">
+      <FaBook className="text-black w-5 h-5" />
     </span>
-    Bookkeeping
+    <span className="ml-2 text-base font-medium">Bookkeeping</span>
   </span>
 </div>
+
+
 
             )}
           </div>
