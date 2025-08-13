@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '@/component/Layout'
 import Hero from './Hero'
+import Cards from './Cards'
 
 
 const page = () => {
@@ -8,6 +9,7 @@ const page = () => {
 <Layout>
     
      <Hero />
+     <Cards />
 </Layout>
  
  
