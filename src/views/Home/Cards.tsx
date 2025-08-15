@@ -5,7 +5,7 @@ const Cards = () => {
     <div className='bg-gradient-to-b from-white via-orange-100 to-white'>
        
     <div className="main-container ">
-     <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 ">
+     <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-stretch ">
 
   <div className=''>
     <h2 className="text-2xl md:text-3xl font-bold lg:w-[230px] w-[240px] text-gray-900 leading-[40px]">
