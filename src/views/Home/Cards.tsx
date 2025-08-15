@@ -5,7 +5,7 @@ const Cards = () => {
     <div className='bg-gradient-to-b from-white via-orange-100 to-white'>
        
     <div className="main-container ">
-     <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-stretch">
+     <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 ">
 
   <div className=''>
     <h2 className="text-2xl md:text-3xl font-bold lg:w-[230px] w-[240px] text-gray-900 leading-[40px]">
@@ -50,12 +50,12 @@ const Cards = () => {
       key={i}
       className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition flex flex-col justify-between h-[290px]"
     >
-      <div className="max-w-[120px] mx-auto">
+      <div className="max-w-[120px]">
   <Image
     src={card.Image}
     alt={card.title}
-    width={112}   // intrinsic width
-    height={90}   // intrinsic height
+    width={112} 
+    height={90}   
     className="object-contain w-28 h-[90px] min-w-[80px] min-h-[80px]"
   />
 </div>
