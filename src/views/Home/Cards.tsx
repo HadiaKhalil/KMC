@@ -71,7 +71,7 @@ const Cards = () => {
    
 
         {/* Bottom Note */}
-        <p className="mt-12 lg:text-[30px] text-[24px] text-gray-700 text-center">
+        <p className="mt-12 lg:text-[30px] text-[20px] text-gray-700 text-center">
           <span className=" text-orange-500">These aren’t marketing badges</span>, they’re signals that  <span className=" text-orange-500">your offshore</span>  team will be  <span className=" text-orange-500">supported</span>,  <span className=" text-orange-500">stable</span>, and  <span className=" text-orange-500">proud to work</span> for you.
         </p>
    
