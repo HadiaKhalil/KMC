@@ -16,7 +16,10 @@ const Hero = () => {
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
         <div>
         
-           <h2 className="md:text-5xl text-4xl lg:w-110 md:leading-[48px] leading-[44px]">
+           <h2 className="font-[Be_Vietnam_Pro] font-semibold 
+              text-[28px] sm:text-[36px] lg:text-[45px] 
+              leading-[36px] sm:leading-[46px] md:leading-[56px] 
+              capitalize text-gray-900 w-full lg:w-110 ">
             <span className="text-black">Built For <span className="text-orange-600"> Aussie Industries </span> </span>{" "}
             <span className="text-black"> That Are  <span className="text-orange-600"> Scaling Fast</span></span>
           </h2>
