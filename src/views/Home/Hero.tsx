@@ -1,190 +1,137 @@
 "use client";
 import React, { useState } from "react";
-import {FaShoppingCart,FaCloud,FaUniversity,FaChartLine,FaHeartbeat,FaUser,FaCog,FaBook} from "react-icons/fa";
-const Hero = () => {
-  const [openSections, setOpenSections] = useState([0]);
-   const toggleSection = (index: number) => {
-    if (openSections.includes(index)) {
-      setOpenSections(openSections.filter(i => i !== index));
-    } else {
-      setOpenSections([...openSections, index]);
-    }
-  };
-    return (
-    <div className="main-container">
-       <section>
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
-        <div>
-        
-           <h2 className="font-[Be_Vietnam_Pro] font-semibold 
-              text-[28px] sm:text-[36px] lg:text-[45px] 
-              leading-[36px] sm:leading-[46px] md:leading-[56px] 
-              capitalize text-gray-900 w-full lg:w-110 ">
-            <span className="text-black">Built For <span className="text-orange-600"> Aussie Industries </span> </span>{" "}
-            <span className="text-black"> That Are  <span className="text-orange-600"> Scaling Fast</span></span>
-          </h2>
-  <p className="text-gray-500 text-[16px] md:text-[18px] mt-4 lg:max-w-[500px]">
-{`  Whether you’re running a digital agency, growing a retail brand, or streamlining back-office
-  support—we’ll help you build the offshore team to get it done.`}
-</p>
-   <button className="mt-6 md:text-[18px] text-[15px] bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 rounded-md font-medium">
-            Explore More Industries
-          </button>            
-        </div>            
+import { sectionsData } from "@/component/Data/Data";
+import Button from "@/component/Button/Button";
+
+type SectionID = string | number;
+
+interface IndustrySectionsProps {
+  openSections: SectionID[];
+  toggleSection: (id: SectionID) => void;
+}
+
+const IndustrySections: React.FC<IndustrySectionsProps> = ({ openSections, toggleSection }) => {
+  if (!Array.isArray(openSections) || typeof toggleSection !== "function") {
+    return null;
+  }
+
+  return (
+    <div className="w-full max-w-[710px] h-auto flex flex-col gap-6 lg:gap-10">
+      {sectionsData.map((section) => {
+        const isOpen = openSections.includes(section.id);
+
+        return (
+          <div
+            key={section.id}
+            className={`p-4 border-b border-[#E1E1E1] ${section.bg || ""} ${
+              section.rounded || ""
+            }`}
+          >
          
-
-
-         <div>
-          <div className="mb-4 p-4 border-b rounded-3xl border-gray-200 bg-blue-100">
             <div
               className="flex items-center justify-between cursor-pointer"
-              onClick={() => toggleSection(0)}
+              onClick={() => toggleSection(section.id)}
             >
-              <div className="flex items-center gap-2 text-lg font-semibold text-gray-800">
-                <FaUniversity className="text-orange-500" />
-                Business Services
+              <div className="flex items-center gap-3">
+                <span className="flex items-center justify-center w-[44px] h-[44px] rounded-full">
+                  {React.cloneElement(section.icon, {
+                    className: "text-[#EE7A30]",
+                    size: 30,
+                    strokeWidth: 1.1,
+                  })}
+                </span>
+                <h2
+                  className="font-medium text-lg sm:text-xl lg:text-2xl leading-6 sm:leading-7 text-[#051636] max-w-[calc(100vw-120px)] lg:max-w-[580px]"
+                  style={{
+                    fontFamily: "'Be Vietnam Pro', sans-serif",
+                    verticalAlign: "middle",
+                    letterSpacing: "0",
+                  }}
+                >
+                  {section.title}
+                </h2>
               </div>
-              <span className="text-2xl font-bold text-gray-500">
-                {openSections.includes(0) ? "–" : "+"}
+              <span className="text-2xl font-bold text-gray-500 select-none">
+                {isOpen ? "–" : "+"}
               </span>
             </div>
-            {openSections.includes(0) && (
-     <div className="flex flex-wrap gap-3 mt-4">
-  {/* Admin */}
-  <span className="flex items-center bg-orange-500 text-white rounded-full pl-2 pr-8 py-1.5">
-    <span className="bg-white rounded-full flex items-center justify-center h-8 w-8">
-      <FaUser className="text-black w-5 h-5" />
-    </span>
-    <span className="ml-2 text-base font-medium">Admin</span>
-  </span>
 
-  {/* Operations */}
-  <span className="flex items-center bg-orange-500 text-white rounded-full pl-2 pr-8 py-1.5">
-    <span className="bg-white rounded-full flex items-center justify-center h-8 w-8">
-      <FaCog className="text-black w-5 h-5" />
-    </span>
-    <span className="ml-2 text-base font-medium">Operations</span>
-  </span>
+            {/* Items */}
+            {isOpen && (
+              <div className="flex flex-wrap gap-3 mt-4 justify-start">
+                {section.items.map((item, idx) => (
+                  <span
+                    key={idx}
+                    className="flex items-center text-white bg-[#EE7A30] hover:bg-[#d96c2b] w-full sm:w-[215px] md:w-[200px] lg:w-[215.33px] h-[50px] gap-3 pr-5 pl-1 rounded-[30px] transition-colors duration-300"
+                  >
+                    <span className="flex items-center justify-center bg-white w-[44px] h-[44px] rounded-full">
+                      {React.cloneElement(item.icon, {
+                        className: "text-black",
+                        size: 24,
+                        strokeWidth: 1.1,
+                      })}
+                    </span>
 
-  {/* Bookkeeping */}
-  <span className="flex items-center bg-orange-500 text-white rounded-full pl-2 pr-8 py-1.5">
-    <span className="bg-white rounded-full flex items-center justify-center h-8 w-8">
-      <FaBook className="text-black w-5 h-5" />
-    </span>
-    <span className="ml-2 text-base font-medium">Bookkeeping</span>
-  </span>
-</div>
-
-
-
-            )}
-          </div>
-          <div className="mb-4 p-4 border-b border-gray-200">
-            <div
-              className="flex items-center justify-between cursor-pointer"
-              onClick={() => toggleSection(1)}
-            >
-              <div className="flex items-center gap-2 text-lg font-semibold text-black">
-                <FaShoppingCart className="text-orange-500" />
-                eCommerce and Retail
-              </div>
-              <span className="text-2xl font-bold text-gray-500">
-                {openSections.includes(1) ? "–" : "+"}
-              </span>
-            </div>
-            {openSections.includes(1) && (
-              <div className="flex flex-wrap gap-3 mt-4">
-                <span className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full"><FaUser /> Product Management</span>
-                <span className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full"><FaCog /> Logistics</span>
+                    <span
+                      className="truncate capitalize text-white font-normal font-be-vietnam-pro"
+                      style={{ fontSize: "16px", lineHeight: "20px" }}
+                    >
+                      {item.label}
+                    </span>
+                  </span>
+                ))}
               </div>
             )}
           </div>
-          <div className="mb-4 p-4 border-b border-gray-200">
-            <div
-              className="flex items-center justify-between cursor-pointer"
-              onClick={() => toggleSection(2)}
-            >
-              <div className="flex items-center gap-2 text-lg font-semibold text-black">
-                <FaCloud className="text-orange-500" />
-                Digital and Creative
-              </div>
-              <span className="text-2xl font-bold text-gray-500">
-                {openSections.includes(2) ? "–" : "+"}
-              </span>
-            </div>
-            {openSections.includes(2) && (
-              <div className="flex flex-wrap gap-3 mt-4">
-                <span className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full"><FaUser /> Design</span>
-                <span className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full"><FaCog /> Development</span>
-              </div>
-            )}
-          </div>
-          <div className="mb-4 p-4 border-b border-gray-200">
-            <div
-              className="flex items-center justify-between cursor-pointer"
-              onClick={() => toggleSection(3)}
-            >
-              <div className="flex items-center gap-2 text-lg font-semibold text-black">
-                <FaUniversity className="text-orange-500" />
-                Accounting and Finance
-              </div>
-              <span className="text-2xl font-bold text-gray-500">
-                {openSections.includes(3) ? "–" : "+"}
-              </span>
-            </div>
-            {openSections.includes(3) && (
-              <div className="flex flex-wrap gap-3 mt-4">
-                <span className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full"><FaUser /> Accounts Payable</span>
-                <span className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full"><FaBook /> Payroll</span>
-              </div>
-            )}
-          </div>
-          <div className="mb-4 p-4 border-b border-gray-200">
-            <div
-              className="flex items-center justify-between cursor-pointer"
-              onClick={() => toggleSection(4)}
-            >
-              <div className="flex items-center gap-2 text-lg font-semibold text-black">
-                <FaChartLine className="text-orange-500" />
-                Sales and Support
-              </div>
-              <span className="text-2xl font-bold text-gray-500">
-                {openSections.includes(4) ? "–" : "+"}
-              </span>
-            </div>
-            {openSections.includes(4) && (
-              <div className="flex flex-wrap gap-3 mt-4">
-                <span className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full"><FaUser /> Customer Service</span>
-                <span className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full"><FaCog /> Tech Support</span>
-              </div>
-            )}
-          </div>
-          <div className="mb-4 p-4 border-b border-gray-200">
-            <div
-              className="flex items-center justify-between cursor-pointer"
-              onClick={() => toggleSection(5)}
-            >
-              <div className="flex items-center gap-2 text-lg font-semibold text-black">
-                <FaHeartbeat className="text-orange-500" />
-                Health and Wellness (Non-Clinical)
-              </div>
-              <span className="text-2xl font-bold text-gray-500">
-                {openSections.includes(5) ? "–" : "+"}
-              </span>
-            </div>
-            {openSections.includes(5) && (
-              <div className="flex flex-wrap gap-3 mt-4">
-                <span className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full"><FaUser /> Fitness Coaching</span>
-                <span className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full"><FaCog /> Diet Planning</span>
-              </div>
-            )}
-          </div>
-
-        </div>
-      </div>
-    </section>
+        );
+      })}
     </div>
-   
+  );
+};
+
+const Hero: React.FC = () => {
+  const [openSections, setOpenSections] = useState<SectionID[]>([sectionsData[0]?.id || 0]);
+
+  const toggleSection = (id: SectionID) => {
+    setOpenSections((prev) =>
+      prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
+    );
+  };
+
+  return (
+    <div className="main-container">
+      <section>
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8  mx-auto">
+     
+          <div className="w-full lg:w-[520px] flex flex-col gap-6 ">
+            <h2
+              className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[45px] 
+                leading-[30px] sm:leading-[38px] md:leading-[46px] lg:leading-[56px] text-[#051636]"
+            >
+              Built For{" "}
+              <span className="text-[#EE7A30]"> Aussie Industries </span> That Are{" "}
+              <span className="text-[#EE7A30]"> Scaling Fast</span>
+            </h2>
+
+            <p
+              className="font-normal text-[#757575] text-sm sm:text-base md:text-lg 
+              leading-[22px] sm:leading-[26px] md:leading-[28px]"
+            >
+              {`Whether you’re running a digital agency, growing a retail brand, or streamlining back-office support—we’ll help you build the offshore team to get it done.`}
+            </p>
+
+            <Button
+              className="mt-3 text-sm md:text-base bg-[#EE7A30] hover:bg-[#d96c2b] text-white w-full sm:w-[200px] md:w-[248px] h-[50px] md:h-[60px] rounded-[12px] font-medium flex items-center justify-center transition-all duration-300"
+            >
+              Explore More Industries
+            </Button>
+          </div>
+
+       
+          <IndustrySections openSections={openSections} toggleSection={toggleSection} />
+        </div>
+      </section>
+    </div>
   );
 };
 
