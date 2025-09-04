@@ -9,23 +9,23 @@ const Cards = () => {
       <div className="main-container ">
 
      
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 lg:gap-10 items-center">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[28px] lg:gap-[30px] items-center">
 
          
-          <div className="flex flex-col gap-4 justify-center ">
+          <div className="flex flex-col gap-4 justify-center items-center sm:items-start max-w-[400px] text-center sm:text-start mx-auto sm:mx-0">
             <h2
               className=" font-semibold text-[#051636] 
               text-[24px] sm:text-[32px] md:text-[38px] lg:text-[45px] 
               leading-[30px] sm:leading-[38px] md:leading-[46px] lg:leading-[56px]"
             >
               Trusted By Top Employers <br />
-              <span className="text-[#EE7A30] capitalize">
+              <span className="text-[#EE7A30] ">
                 Across Asia- Pacific
               </span>
             </h2>
 
             <p
-              className="font-[Be_Vietnam_Pro] font-normal text-[#757575] 
+              className=" font-normal text-[#757575] 
               text-[14px] sm:text-[16px] md:text-[18px] 
               leading-[22px] sm:leading-[26px] md:leading-[28px]"
             >

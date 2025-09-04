@@ -1,7 +1,7 @@
 const cardData = [
   {
     Image: "/images/Frame.png",
-    title: "B Corp Certified",
+    title: "B Corp br Certified",
     text: "Proven commitment to governance, people, and planet",
   },
   {

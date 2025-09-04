@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
      
           <div className="w-full lg:w-[520px] flex flex-col gap-6 ">
             <h2
-              className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[45px] 
+              className="font-semibold text-[18px] sm:text-3xl md:text-4xl lg:text-[45px] 
                 leading-[30px] sm:leading-[38px] md:leading-[46px] lg:leading-[56px] text-[#051636]"
             >
               Built For{" "}
@@ -114,14 +114,14 @@ const Hero: React.FC = () => {
             </h2>
 
             <p
-              className="font-normal text-[#757575] text-sm sm:text-base md:text-lg 
+              className="font-normal text-[#757575]   text-[14px] sm:text-[16px] md:text-[18px]
               leading-[22px] sm:leading-[26px] md:leading-[28px]"
             >
               {`Whether you’re running a digital agency, growing a retail brand, or streamlining back-office support—we’ll help you build the offshore team to get it done.`}
             </p>
 
             <Button
-              className="mt-3 text-sm md:text-base bg-[#EE7A30] hover:bg-[#d96c2b] text-white w-full sm:w-[200px] md:w-[248px] h-[50px] md:h-[60px] rounded-[12px] font-medium flex items-center justify-center transition-all duration-300"
+              className="mt-3 text-sm md:text-base bg-[#EE7A30] hover:bg-[#d96c2b] text-white sm:w-[200px] md:w-[248px] h-[50px] md:h-[60px] w-[248px] rounded-[12px] font-medium flex items-center justify-center transition-all duration-300"
             >
               Explore More Industries
             </Button>
