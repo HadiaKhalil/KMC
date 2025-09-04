@@ -121,7 +121,7 @@ const Hero: React.FC = () => {
             </p>
 
             <Button
-              className="mt-3 text-sm md:text-base bg-[#EE7A30] hover:bg-[#d96c2b] text-white sm:w-[200px] md:w-[248px] h-[50px] md:h-[60px] w-[248px] rounded-[12px] font-medium flex items-center justify-center transition-all duration-300"
+              className="mt-3 text-sm md:text-base bg-[#EE7A30] hover:bg-[#d96c2b] text-white  sm:w-[248px] h-[50px] md:h-[60px]  rounded-[12px] font-medium flex items-center justify-center transition-all duration-300"
             >
               Explore More Industries
             </Button>
