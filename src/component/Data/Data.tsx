@@ -33,26 +33,58 @@ export default cardData;
 
 
 import React from "react";
-import {
-  FaUser,
-  FaCog,
-  FaBook,
-  FaUniversity,
-  FaShoppingCart,
-  FaCloud,
-  FaChartLine,
-  FaHeartbeat,
-} from "react-icons/fa";
+import Image from "next/image";
 
 export const sectionsData = [
   {
     id: 0,
     title: "Business Services",
-    icon: <FaUniversity  />,
+    icon: (
+      <Image
+        src="/images/Frame (10).png"
+        alt="Business Services"
+        width={40}
+            height={40}
+        className="object-contain"
+      />
+    ),
     items: [
-      { icon: <FaUser />, label: "Admin" },
-      { icon: <FaCog  />, label: "Operations" },
-      { icon: <FaBook  />, label: "Bookkeeping" },
+      {
+        icon: (
+          <Image
+            src="/images/Group 734 (2).png"
+            alt="Admin"
+            width={40}
+            height={40}
+            className="object-contain"
+          />
+        ),
+        label: "Admin",
+      },
+      {
+        icon: (
+          <Image
+            src="/images/Group 735.png"
+            alt="Operations"
+          width={40}
+            height={40}
+            className="object-contain"
+          />
+        ),
+        label: "Operations",
+      },
+      {
+        icon: (
+          <Image
+            src="/images/Group 736.png"
+            alt="Bookkeeping"
+            width={40}
+            height={40}
+            className="object-contain"
+          />
+        ),
+        label: "Bookkeeping",
+      },
     ],
     bg: "bg-[#E9F1FF]",
     rounded: "rounded-[20px]",
@@ -60,46 +92,197 @@ export const sectionsData = [
   {
     id: 1,
     title: "eCommerce and Retail",
-    icon: <FaShoppingCart  />,
+    icon: (
+      <Image
+        src="/images/Frame (2).png"
+        alt="eCommerce"
+       width={40}
+            height={40}
+        className="object-contain"
+      />
+    ),
     items: [
-      { icon: <FaUser  />, label: "Product Management" },
-      { icon: <FaCog  />, label: "Logistics" },
+      {
+        icon: (
+          <Image
+            src="/images/Frame (2).png"
+            alt="Product Management"
+            width={40}
+            height={40}
+            className="object-contain"
+          />
+        ),
+        label: "Product Management",
+      },
+      {
+        icon: (
+          <Image
+            src="/images/Frame (2).png"
+            alt="Logistics"
+            width={40}
+            height={40}
+            className="object-contain"
+          />
+        ),
+        label: "Logistics",
+      },
     ],
   },
   {
     id: 2,
     title: "Digital and Creative",
-    icon: <FaCloud  />,
+    icon: (
+      <Image
+        src="/images/Frame (6).png"
+        alt="Digital and Creative"
+        width={40}
+            height={40}
+        className="object-contain"
+      />
+    ),
     items: [
-      { icon: <FaUser  />, label: "Design" },
-      { icon: <FaCog  />, label: "Development" },
+      {
+        icon: (
+          <Image
+            src="/images/Frame (6).png"
+            alt="Design"
+             width={40}
+            height={40}
+            className="object-contain"
+          />
+        ),
+        label: "Design",
+      },
+      {
+        icon: (
+          <Image
+            src="/images/Frame (6).png"
+            alt="Development"
+             width={40}
+            height={40}
+            className="object-contain"
+          />
+        ),
+        label: "Development",
+      },
     ],
   },
   {
     id: 3,
     title: "Accounting and Finance",
-    icon: <FaUniversity  />,
+    icon: (
+      <Image
+        src="/images/Frame (7).png"
+        alt="Accounting and Finance"
+         width={40}
+            height={40}
+        className="object-contain"
+      />
+    ),
     items: [
-      { icon: <FaUser  />, label: "Accounts Payable" },
-      { icon: <FaBook  />, label: "Payroll" },
+      {
+        icon: (
+          <Image
+            src="/images/Frame (7).png"
+            alt="Accounts Payable"
+             width={40}
+            height={40}
+            className="object-contain"
+          />
+        ),
+        label: "Accounts Payable",
+      },
+      {
+        icon: (
+          <Image
+            src="/images/Frame (7).png"
+            alt="Payroll"
+            width={40}
+            height={40}
+            className="object-contain"
+          />
+        ),
+        label: "Payroll",
+      },
     ],
   },
   {
     id: 4,
     title: "Sales and Support",
-    icon: <FaChartLine  />,
+    icon: (
+      <Image
+        src="/images/Frame (8).png"
+        alt="Sales and Support"
+         width={40}
+            height={40}
+        className="object-contain"
+      />
+    ),
     items: [
-      { icon: <FaUser  />, label: "Customer Service" },
-      { icon: <FaCog  />, label: "Tech Support" },
+      {
+        icon: (
+          <Image
+            src="/images/Frame (8).png"
+            alt="Customer Service"
+             width={40}
+            height={40}
+            className="object-contain"
+          />
+        ),
+        label: "Customer Service",
+      },
+      {
+        icon: (
+          <Image
+            src="/images/Frame (8).png"
+            alt="Tech Support"
+            width={40}
+            height={40}
+            className="object-contain"
+          />
+        ),
+        label: "Tech Support",
+      },
     ],
   },
   {
     id: 5,
     title: "Health and Wellness (Non-Clinical)",
-    icon: <FaHeartbeat  />,
+    icon: (
+      <Image
+        src="/images/Frame (9).png"
+        alt="Health and Wellness"
+         width={40}
+            height={40}
+        className="object-contain"
+      />
+    ),
     items: [
-      { icon: <FaUser  />, label: "Fitness Coaching" },
-      { icon: <FaCog  />, label: "Diet Planning" },
+      {
+        icon: (
+          <Image
+            src="/images/Frame (9).png"
+            alt="Fitness Coaching"
+            width={40}
+            height={40}
+            className="object-contain"
+          />
+        ),
+        label: "Fitness Coaching",
+      },
+      {
+        icon: (
+          <Image
+            src="/images/Frame (9).png"
+            alt="Diet Planning"
+            width={40}
+            height={40}
+            className="object-contain"
+          />
+        ),
+        label: "Diet Planning",
+      },
     ],
   },
 ];
+

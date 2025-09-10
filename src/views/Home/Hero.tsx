@@ -67,8 +67,8 @@ const IndustrySections: React.FC<IndustrySectionsProps> = ({ openSections, toggl
                     <span className="flex items-center justify-center bg-white w-[44px] h-[44px] rounded-full">
                       {React.cloneElement(item.icon, {
                         className: "text-black",
-                        size: 24,
-                        strokeWidth: 1.1,
+                        size: 34,
+                      
                       })}
                     </span>
 
