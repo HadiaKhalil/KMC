@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '@/component/Layout'
 import Hero from './Hero'
 import Cards from './Cards'
+import Businesses from './Businesses'
 
 
 const page = () => {
@@ -10,6 +11,7 @@ const page = () => {
     
      <Hero />
      <Cards />
+     <Businesses />
 </Layout>
  
  
