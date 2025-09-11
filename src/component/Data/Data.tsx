@@ -286,3 +286,41 @@ export const sectionsData = [
   },
 ];
 
+
+export const businessData = [
+  {
+    img: "/images/user 1.png",
+    bg: "/images/bg......png",
+    title: "86%",
+    title1: " Employee Retention",
+    text: "We keep good people around",
+  },
+  {
+    img: "/images/user 2.png",
+    bg: "/images/bg......png",
+    title: "Zero",
+    title1: " Outsourcing",
+    text: "Every service is run by KMC",
+  },
+  {
+    img: "/images/user 3.png",
+    bg: "/images/bg......png",
+    title: "6,000+",
+    title1: " Employees",
+    text: "Across 500+ global clients",
+  },
+  {
+    img: "/images/user 4.png",
+    bg: "/images/bg......png",
+    title: "Support",
+    title1: " Hours",
+    text: "That align with your workday",
+  },
+  {
+    img: "/images/user 5.png",
+    bg: "/images/bg......png",
+    title: "Certificates",
+    title1: " Approved",
+    text: "ISO 27001, GDPR, and Philippine DPA compliant",
+  },
+];
