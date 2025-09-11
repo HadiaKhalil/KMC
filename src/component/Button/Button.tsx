@@ -24,7 +24,7 @@ export default function Button({
       disabled={disabled}
       {...rest}
       className={`mt-3
-        text-sm md:text-base
+        text-sm md:text-[16px]
         bg-[#EE7A30] hover:bg-[#d96c2b] text-white
         min-h-[50px] md:min-h-[60px]
         px-6 py-3
