@@ -1,16 +1,24 @@
 import Image from "next/image";
 import { whyKMCData } from "@/component/Data/Data";
 
-const WhyKMC = () => {
-  const allCards = whyKMCData;  // no slicing
+// Define the shape of one card item
+interface KMCDataItem {
+  img: string;
+  title: string;
+  text: string;
+  dark?: boolean;
+}
 
-  const renderCard = (card, i) => (
+const WhyKMC = () => {
+  const allCards: KMCDataItem[] = whyKMCData;
+
+  const renderCard = (card: KMCDataItem, i: number) => (
     <div
       key={i}
-      className={`relative rounded-[20px] border border-[#D6DCE3] p-2  ${
+      className={`relative rounded-[20px] border border-[#D6DCE3] p-2 ${
         card.dark ? "bg-[#0A1A2F] text-white" : "bg-white"
       }`}
-      style={{ width: "100%", maxWidth: "370px", height: "600px" }}
+      style={{ width: "100%", maxWidth: "370px" }}
     >
       <div className="w-full h-[450px] relative overflow-hidden rounded-[16px]">
         <Image
@@ -21,8 +29,12 @@ const WhyKMC = () => {
         />
       </div>
       <div className="p-4">
-        <h3 className="font-bold text-[24px] mb-2 leading-[30px]">{card.title}</h3>
-        <p className="text-[16px] text-[#6B717A] leading-[20px]">{card.text}</p>
+        <h3 className="font-bold text-[24px] mb-2 leading-[30px]">
+          {card.title}
+        </h3>
+        <p className="text-[16px] text-[#6B717A] leading-[20px]">
+          {card.text}
+        </p>
       </div>
     </div>
   );
@@ -39,10 +51,10 @@ const WhyKMC = () => {
             Why KMC?
           </h2>
           <p className="text-gray-600 text-[16px] sm:text-[18px] mt-4">
-            Here’s the thing: most EORs are payroll platforms in disguise. Some slick UI, a
-            support chatbot, and a call center in a faraway timezone. That’s not us. We’re
-            real people, building real teams—for companies who care how their brand shows up
-            overseas.
+            Here’s the thing: most EORs are payroll platforms in disguise. Some slick
+            UI, a support chatbot, and a call center in a faraway timezone. That’s not us.
+            We’re real people, building real teams—for companies who care how their brand
+            shows up overseas.
           </p>
         </div>
 
@@ -55,7 +67,7 @@ const WhyKMC = () => {
             lg:grid-cols-3 
             gap-x-10 
             gap-y-10 
-            justify-items-center 
+            justify-items-center
           "
         >
           {allCards.map(renderCard)}
