@@ -324,3 +324,51 @@ export const businessData = [
     text: "ISO 27001, GDPR, and Philippine DPA compliant",
   },
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const whyKMCData = [
+  {
+    img: "/images/image.png",
+    title: "86% Retention Rate",
+    text: "Because culture beats churn every time.",
+    dark: true,
+  },
+  {
+    img: "/images/image (1).png",
+    title: "Zero Outsourcing",
+    text: "Every service is delivered by KMC—no hidden vendors, no fine print.",
+    dark: false,
+  },
+  {
+    img: "/images/image (2).png",
+    title: "15 Years, 400+ Clients, 6,000+ Employees",
+    text: "From startups to the world’s fastest-growing unicorns.",
+    dark: false,
+  },
+  {
+    img: "/images/image (3).png",
+    title: "B Corp + ISO 27001 + ISO 9001 Certified",
+    text: "Because security, sustainability, and doing things right actually matter.",
+    dark: false,
+  },
+  {
+    img: "/images/image (4).png",
+    title: "Fast Time to Hire",
+    text: "30–45 days from “let’s do this” to “your new team is up and running.”",
+    dark: false,
+  },
+];
+
+
