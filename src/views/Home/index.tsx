@@ -3,6 +3,7 @@ import Layout from '@/component/Layout'
 import Hero from './Hero'
 import Cards from './Cards'
 import Businesses from './Businesses'
+import WhyKMC from './WhyKMC'
 
 
 const page = () => {
@@ -12,6 +13,8 @@ const page = () => {
      <Hero />
      <Cards />
      <Businesses />
+
+     <WhyKMC />
 </Layout>
  
  
