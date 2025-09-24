@@ -36,6 +36,10 @@ body{
   md:px-14 px-7 py-10
 }
 
+.main-container1{
+  @apply max-w-[1440px] mx-auto
+  md:px-18 px-7 py-10
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
 

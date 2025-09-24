@@ -1,15 +1,13 @@
 import Image from "next/image";
 import { whyKMCData } from "@/component/Data/Data";
 
-
 const WhyKMC = () => {
-  const topCards = whyKMCData.slice(0, 3);
-  const bottomCards = whyKMCData.slice(3);
+  const allCards = whyKMCData;  // no slicing
 
   const renderCard = (card, i) => (
     <div
       key={i}
-      className={`relative rounded-[20px] border border-[#D6DCE3] p-2 shadow-[2px_5px_12px_0px_#0000001A,10px_20px_22px_0px_#00000017,22px_44px_30px_0px_#0000000D,39px_78px_35px_0px_#00000003,61px_123px_38px_0px_#00000000] ${
+      className={`relative rounded-[20px] border border-[#D6DCE3] p-2  ${
         card.dark ? "bg-[#0A1A2F] text-white" : "bg-white"
       }`}
       style={{ width: "100%", maxWidth: "370px", height: "600px" }}
@@ -48,14 +46,19 @@ const WhyKMC = () => {
           </p>
         </div>
 
-        {/* Top 3 cards */}
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 justify-items-center">
-          {topCards.map(renderCard)}
-        </div>
-
-        {/* Last 2 cards */}
-        <div className="flex justify-center flex-wrap gap-10 mt-10">
-          {bottomCards.map(renderCard)}
+        {/* Cards in responsive grid */}
+        <div
+          className="
+            grid 
+            grid-cols-1 
+            md:grid-cols-2 
+            lg:grid-cols-3 
+            gap-x-10 
+            gap-y-10 
+            justify-items-center 
+          "
+        >
+          {allCards.map(renderCard)}
         </div>
       </div>
     </div>
