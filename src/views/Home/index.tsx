@@ -5,6 +5,8 @@ import Cards from './Cards'
 import Businesses from './Businesses'
 import WhyKMC from './WhyKMC'
 import KmcDifference from './KmcDifference'
+import TalentStrategy from './TalentStrategy'
+import FAQSection from './FAQSection'
 
 
 const page = () => {
@@ -17,9 +19,11 @@ const page = () => {
 
      <WhyKMC />
      <KmcDifference />
+      <TalentStrategy />
+      <FAQSection />
+ 
 </Layout>
- 
- 
+
   )
 }
 
