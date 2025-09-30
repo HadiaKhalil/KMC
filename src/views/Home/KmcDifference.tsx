@@ -5,18 +5,18 @@ const KmcDifference = () => {
     <div className="bg-white">
       <div className="main-container1 px-4 sm:px-6 lg:px-0">
         <div className="mx-auto space-y-16 max-w-[1171px]">
-          {/* Top Section – 2 Column Grid */}
+        
           <div className="grid lg:grid-cols-2 gap-10 items-start">
-            {/* Left Column: Heading */}
+         
             <div>
-              <h2 className="text-[18px] sm:text-3xl md:text-4xl lg:text-[55px] text-gray-900  mb-6 max-w-[470px]">
+              <h2 className="text-[32px] sm:text-3xl md:text-4xl lg:text-[55px] text-gray-900  mb-6 max-w-[470px]">
                 The KMC Difference
               </h2>
             </div>
 
-            {/* Right Column: Features with Icons */}
+          
             <div className="space-y-6">
-              {/* Item 1 */}
+         
               <div className="flex items-start gap-4">
                 <div className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] relative flex-shrink-0">
                   <Image
@@ -36,7 +36,7 @@ const KmcDifference = () => {
                 </div>
               </div>
 
-              {/* Item 2 */}
+           
               <div className="flex items-start gap-4">
                 <div className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] relative flex-shrink-0">
                   <Image
@@ -56,7 +56,7 @@ const KmcDifference = () => {
                 </div>
               </div>
 
-              {/* Item 3 */}
+       
               <div className="flex items-start gap-4">
                 <div className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] relative flex-shrink-0">
                   <Image
@@ -78,7 +78,7 @@ const KmcDifference = () => {
             </div>
           </div>
 
-          {/* Bottom Stats Section – 4 Column Grid */}
+         
          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
   <div>
     <p className=" text-[18px] sm:text-3xl md:text-4xl lg:text-[79px] text-gray-900">30-45</p>

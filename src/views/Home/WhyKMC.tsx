@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { whyKMCData } from "@/component/Data/Data";
 
-// Define the shape of one card item
+
 interface KMCDataItem {
   img: string;
   title: string;
@@ -15,8 +15,8 @@ const WhyKMC = () => {
   const renderCard = (card: KMCDataItem, i: number) => (
     <div
       key={i}
-      className={`relative rounded-[20px] border border-[#D6DCE3] p-2 ${
-        card.dark ? "bg-[#0A1A2F] text-white" : "bg-white"
+      className={`relative rounded-[20px] border hover:bg-[#0A1A2F] hover:text-white border-[#D6DCE3] p-2 ${
+        card.dark ? "hover:bg-[#0A1A2F] hover:text-white" : "bg-white"
       }`}
       style={{ width: "100%", maxWidth: "370px" }}
     >
@@ -42,12 +42,12 @@ const WhyKMC = () => {
   return (
     <div className="main-container px-4 sm:px-6 lg:px-0">
       <div className="w-full max-w-[1171px] mx-auto">
-        {/* Heading */}
+
         <div className="max-w-3xl mb-12 gap-[18px]">
           <p className="text-orange-500 text-[14px] sm:text-[16px]  md:text-[18px] lg:text-[20px] font-semibold uppercase">
             Because offshore doesn’t have to feel… offshore
           </p>
-          <h2 className="text-[40px] sm:text-[48px] lg:text-[55px] font-bold text-gray-900 mt-2 leading-tight">
+          <h2 className="text-[32px] sm:text-3xl md:text-4xl lg:text-[55px] font-bold text-gray-900 mt-2 leading-tight">
             Why KMC?
           </h2>
           <p className="text-gray-600 text-[14px] sm:text-[16px]  lg:text-[18px] mt-4">
@@ -58,17 +58,10 @@ const WhyKMC = () => {
           </p>
         </div>
 
-        {/* Cards in responsive grid */}
+  
         <div
           className="
-            grid 
-            grid-cols-1 
-            md:grid-cols-2 
-            lg:grid-cols-3 
-            gap-x-10 
-            gap-y-10 
-            justify-items-center
-          "
+            grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-x-10  gap-y-10 justify-items-center"
         >
           {allCards.map(renderCard)}
         </div>

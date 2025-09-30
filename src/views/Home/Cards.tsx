@@ -9,9 +9,9 @@ const Cards = () => {
       <div className="main-container">
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[28px] lg:gap-[30px] items-center">
 
-          {/* Left Text Section */}
+ 
           <div className="flex flex-col gap-4 justify-center items-center sm:items-start max-w-[400px] text-center sm:text-start mx-auto sm:mx-0">
-            <h2 className="font-semibold text-[#051636] text-[18px] sm:text-3xl md:text-4xl lg:text-[45px] leading-[30px] sm:leading-[38px] md:leading-[46px] lg:leading-[56px]">
+            <h2 className="font-semibold text-[#051636] text-[32px] sm:text-3xl md:text-4xl lg:text-[45px] leading-[30px] sm:leading-[38px] md:leading-[46px] lg:leading-[56px]">
               Trusted By Top Employers <br />
               <span className="text-[#EE7A30]"> Across Asia- Pacific </span>
             </h2>
@@ -22,7 +22,7 @@ const Cards = () => {
             </p>
           </div>
 
-          {/* Cards */}
+       
           {cardData.map((card, i) => (
             <div
               key={i}
@@ -49,12 +49,12 @@ const Cards = () => {
           ))}
         </div>
 
-        {/* Button */}
+   
         <div className="flex justify-center mt-8">
           <Button>See What These Certifications Mean for You</Button>
         </div>
 
-        {/* Bottom Text */}
+     
         <p className="mt-6 text-center font-[Be_Vietnam_Pro] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] leading-[22px] sm:leading-[28px] md:leading-[34px] lg:leading-[40px] text-gray-700 uppercase">
           <span className="text-[#EE7A30] font-semibold">These aren’t marketing badges</span>, they’re signals that{" "}
           <span className="text-[#EE7A30] font-semibold">your offshore</span> team will be{" "}

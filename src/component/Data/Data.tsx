@@ -371,4 +371,77 @@ export const whyKMCData = [
   },
 ];
 
+export const cards = [
+    {
+      title: "Great Place to Work Certified",
+      subtitle: "(and proud of it)",
+      bgColor: "bg-[#FFCE35]",
+      image: "/images/Vector (1).png",
+    },
+    {
+      title: "Career Growth & Leadership Tracks",
+      subtitle: "",
+      bgColor: "bg-[#FF7200]",
+      image: "/images/Icon (2).png",
+    },
+    {
+      title: "Well-Balanced Benefits",
+      subtitle: "HMO, PTO, Housing, Flex Work",
+      bgColor: "bg-[#001738] text-white",
+      image: "/images/Vector (1).png",
+    },
+    {
+      title: "Culture That Clicks",
+      subtitle: "Ice Cream Fridays, Town Halls, Engagement Programs",
+      bgColor: "bg-[#FF7200]",
+      image: "/images/Icon.png",
+    },
+    {
+      title: "HR Business Partners",
+      subtitle: "for Every Client Team",
+      bgColor: "bg-[#FFCE35]",
+      image: "/images/Icon (1).png",
+    },
+  ];
 
+
+
+
+
+export const faqs = [
+  {
+    question: "What is a full-stack Employer of Record (EOR)?",
+    answer:
+      "A full-stack Employer of Record (EOR) is a company that hires, manages, and supports your offshore employees on your behalf. KMC handles recruitment, HR, payroll, legal compliance, office space, and IT infrastructure—so you focus on results, not red tape.",
+  },
+  {
+    question: "Do I need a legal entity to hire offshore through KMC?",
+    answer:
+      "No, you don’t. KMC, as your Employer of Record (EOR), allows you to hire globally without setting up a legal entity. We handle compliance and employment formalities.",
+  },
+  {
+    question: "What types of roles can KMC help us hire?",
+    answer:
+      "KMC can help you hire a wide range of roles including developers, designers, customer support, finance teams, marketing professionals, and more.",
+  },
+  {
+    question: "Where will our offshore team work?",
+    answer:
+      "Your offshore team can work from KMC's fully serviced offices across the Philippines or remotely, depending on your business needs.",
+  },
+  {
+    question: "How long does it take to start working with KMC?",
+    answer:
+      "Onboarding can be done in as little as a few days once candidate selection is complete and documentation is submitted.",
+  },
+  {
+    question: "How secure is KMC’s IT infrastructure?",
+    answer:
+      "KMC provides enterprise-grade security infrastructure, including secure networks, endpoint protection, and compliance with data privacy standards.",
+  },
+  {
+    question: "How is KMC different from other EOR or outsourcing providers?",
+    answer:
+      "KMC offers a full-stack solution — office space, hiring, HR, payroll, IT, and compliance — making it a seamless end-to-end experience for clients.",
+  },
+];

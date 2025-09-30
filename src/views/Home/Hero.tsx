@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
      
           <div className="w-full lg:w-[520px] flex flex-col gap-6 ">
             <h2
-              className="font-semibold text-[18px] sm:text-3xl md:text-4xl lg:text-[45px] 
+              className="font-semibold text-[32px] sm:text-3xl md:text-4xl lg:text-[45px] 
                 leading-[30px] sm:leading-[38px] md:leading-[46px] lg:leading-[56px] text-[#051636]"
             >
               Built For{" "}

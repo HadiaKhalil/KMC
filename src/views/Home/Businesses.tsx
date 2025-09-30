@@ -8,7 +8,7 @@ const Businesses = () => {
     <section className="w-full bg-white">
       <div className="main-container text-center">
         <div className="max-w-[970px] mx-auto">
-          <h2 className="text-[18px] sm:text-3xl md:text-4xl lg:text-[45px] font-semibold leading-tight lg:leading-[57px] capitalize text-[#0A1633]">
+          <h2 className="text-[32px] sm:text-3xl md:text-4xl lg:text-[45px] font-semibold leading-tight lg:leading-[57px] capitalize text-[#0A1633]">
             Why <span className="text-[#FF6B00]">Aussie Businesses</span> Back KMC
           </h2>
           <p className="text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-[24px] sm:leading-[30px] text-[#757575] mt-4">
