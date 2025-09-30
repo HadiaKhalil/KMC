@@ -11,42 +11,37 @@ const faqs = [
   {
     question: "Do I need a legal entity to hire offshore through KMC?",
     answer:
-      "A full-stack Employer of Record (EOR) is a company that hires, manages, and supports your offshore employees on your behalf. KMC handles recruitment, HR, payroll",
+      "No, you don’t. KMC, as your Employer of Record (EOR), allows you to hire globally without setting up a legal entity. We handle compliance and employment formalities.",
   },
   {
     question: "What types of roles can KMC help us hire?",
     answer:
-      "A full-stack Employer of Record (EOR) is a company that hires, manages, and supports your offshore employees on your behalf. KMC handles recruitment, HR, payroll",
+      "KMC can help you hire a wide range of roles including developers, designers, customer support, finance teams, marketing professionals, and more.",
   },
   {
     question: "Where will our offshore team work?",
     answer:
-      "A full-stack Employer of Record (EOR) is a company that hires, manages, and supports your offshore employees on your behalf. KMC handles recruitment, HR, payroll",
+      "Your offshore team can work from KMC's fully serviced offices across the Philippines or remotely, depending on your business needs.",
   },
   {
     question: "How long does it take to start working with KMC?",
     answer:
-      "A full-stack Employer of Record (EOR) is a company that hires, manages, and supports your offshore employees on your behalf. KMC handles recruitment, HR, payroll",
-  },
-  {
-    question: "What types of roles can KMC help us hire?",
-    answer:
-      "A full-stack Employer of Record (EOR) is a company that hires, manages, and supports your offshore employees on your behalf. KMC handles recruitment, HR, payroll",
+      "Onboarding can be done in as little as a few days once candidate selection is complete and documentation is submitted.",
   },
   {
     question: "How secure is KMC’s IT infrastructure?",
     answer:
-      "A full-stack Employer of Record (EOR) is a company that hires, manages, and supports your offshore employees on your behalf. KMC handles recruitment, HR, payroll",
+      "KMC provides enterprise-grade security infrastructure, including secure networks, endpoint protection, and compliance with data privacy standards.",
   },
   {
     question: "How is KMC different from other EOR or outsourcing providers?",
     answer:
-      "A full-stack Employer of Record (EOR) is a company that hires, manages, and supports your offshore employees on your behalf. KMC handles recruitment, HR, payroll",
+      "KMC offers a full-stack solution — office space, hiring, HR, payroll, IT, and compliance — making it a seamless end-to-end experience for clients.",
   },
 ];
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null); // ✅ FIXED
 
   const toggle = (index: number) => {
     setOpenIndex(index === openIndex ? null : index);
@@ -54,20 +49,20 @@ export default function FAQSection() {
 
   return (
     <div className="bg-[#FFFAF5]">
-      <div className="main-container1 ">
-        <div className=" flex lg:flex-row flex-col gap-10 items-start">
+      <div className="main-container1">
+        <div className="flex lg:flex-row flex-col gap-10 items-start">
           {/* Left Column */}
-          <div className=' lg:w-1/2 mt-8'>
+          <div className="lg:w-1/2 mt-8">
             <h5 className="text-[#FF7200] text-[20px] font-bold uppercase mb-4">
               Frequently Asked Questions
             </h5>
-            <h2 className="text-[32px] sm:text-[40px] lg:text-[45px] font-semibold text-[#001738] leading-tight ">
+            <h2 className="text-[32px] sm:text-[40px] lg:text-[45px] font-semibold text-[#001738] leading-tight">
               FAQs: Everything You Need to Know About KMC's EOR Services
             </h2>
           </div>
 
           {/* Right Column - FAQs */}
-          <div className="flex flex-col w-1/1 ">
+          <div className="flex flex-col w-full">
             {faqs.map((faq, index) => (
               <div
                 key={index}
