@@ -53,10 +53,10 @@ export default function FAQSection() {
         <div className="flex lg:flex-row flex-col gap-10 items-start">
           {/* Left Column */}
           <div className="lg:w-1/2 mt-8">
-            <h5 className="text-[#FF7200] text-[20px] font-bold uppercase mb-4">
+            <h5 className="text-[#FF7200] text-[14px] md:text-[20px] font-bold uppercase mb-4">
               Frequently Asked Questions
             </h5>
-            <h2 className="text-[32px] sm:text-[40px] lg:text-[45px] font-semibold text-[#001738] leading-tight">
+            <h2 className="text-[18px] sm:text-3xl md:text-4xl lg:text-[45px] font-semibold text-[#001738] leading-tight">
               FAQs: Everything You Need to Know About KMC's EOR Services
             </h2>
           </div>
@@ -70,7 +70,7 @@ export default function FAQSection() {
                 onClick={() => toggle(index)}
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-[18px] font-semibold text-[#001738]">
+                  <h3 className=" text-[14px] md:text-[16px] lg:text-[18px] font-semibold text-[#001738]">
                     {faq.question}
                   </h3>
                   <span className="text-[24px] font-bold text-[#FF7200]">

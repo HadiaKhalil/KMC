@@ -9,7 +9,7 @@ const KmcDifference = () => {
           <div className="grid lg:grid-cols-2 gap-10 items-start">
             {/* Left Column: Heading */}
             <div>
-              <h2 className="text-[32px] sm:text-[45px] lg:text-[55px] text-gray-900  mb-6 max-w-[470px]">
+              <h2 className="text-[18px] sm:text-3xl md:text-4xl lg:text-[55px] text-gray-900  mb-6 max-w-[470px]">
                 The KMC Difference
               </h2>
             </div>
@@ -27,10 +27,10 @@ const KmcDifference = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="text-[20px] sm:text-[24px] font-semibold text-gray-900">
+                  <h4 className="text-[18px] md:text-[20px] lg:text-[24px] font-semibold text-gray-900">
                     Cultural Integration
                   </h4>
-                  <p className="text-gray-600 text-[16px]">
+                  <p className="text-gray-600  text-[14px]  md:text-[16px]">
                     Deep cultural alignment programs that ensure your remote teams feel like true extensions of your company.
                   </p>
                 </div>
@@ -81,20 +81,20 @@ const KmcDifference = () => {
           {/* Bottom Stats Section – 4 Column Grid */}
          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
   <div>
-    <p className="text-[48px] sm:text-[64px] lg:text-[79px] text-gray-900">30-45</p>
-    <p className="text-[18px] sm:text-[20px] lg:text-[24px] text-gray-600">DAYS TO FIRST HIRE</p>
+    <p className=" text-[18px] sm:text-3xl md:text-4xl lg:text-[79px] text-gray-900">30-45</p>
+    <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[24px] text-gray-600">DAYS TO FIRST HIRE</p>
   </div>
   <div>
-    <p className="text-[48px] sm:text-[64px] lg:text-[79px] text-gray-900">70%</p>
-    <p className="text-[18px] sm:text-[20px] lg:text-[24px] text-gray-600">COST SAVINGS</p>
+    <p className="text-[18px] sm:text-3xl md:text-4xl lg:text-[79px] text-gray-900">70%</p>
+    <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[24px] text-gray-600">COST SAVINGS</p>
   </div>
   <div>
-    <p className="text-[48px] sm:text-[64px] lg:text-[79px] text-gray-900">24/7</p>
-    <p className="text-[18px] sm:text-[20px] lg:text-[24px] text-gray-600">SUPPORT COVERAGE</p>
+    <p className="text-[18px] sm:text-3xl md:text-4xl lg:text-[79px] text-gray-900">24/7</p>
+    <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[24px] text-gray-600">SUPPORT COVERAGE</p>
   </div>
   <div>
-    <p className="text-[48px] sm:text-[64px] lg:text-[79px] text-gray-900">99.9%</p>
-    <p className="text-[18px] sm:text-[20px] lg:text-[24px] text-gray-600">UPTIME SLA</p>
+    <p className="text-[18px] sm:text-3xl md:text-4xl lg:text-[79px] text-gray-900">99.9%</p>
+    <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[24px] text-gray-600">UPTIME SLA</p>
   </div>
 </div>
 

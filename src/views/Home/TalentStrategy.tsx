@@ -39,13 +39,13 @@ export default function TalentStrategy() {
       <div className="">
         <div className="max-w-7xl mx-auto">
           {/* Section Heading */}
-          <h4 className="text-[#FF7200] text-[20px] font-bold uppercase tracking-widest">
+          <h4 className="text-[#FF7200]  text-[18px] md:text-[20px] font-bold uppercase tracking-widest">
             Talent Strategy
           </h4>
-          <h2 className="text-[55px] font-bold mt-2 mb-4 text-gray-900">
+          <h2 className="  text-[18px] sm:text-3xl md:text-4xl lg:text-[55px] font-bold mt-2 mb-4 text-gray-900">
             How We Attract (and Keep) the Top 1%
           </h2>
-          <p className="text-[#6B717A] text-[18px] mb-10">
+          <p className="text-[#6B717A] text-[14px] sm:text-[16px] md:text-[18px] mb-10">
             We’re not just fighting for talent—we’re winning.
           </p>
 
@@ -69,9 +69,9 @@ export default function TalentStrategy() {
 
                 {/* Text Content */}
                 <div>
-                  <h3 className="text-[24px] text-white">{card.title}</h3>
+                  <h3 className="lg:text-[24px]  text-[18px] sm:text-[20px] text-white">{card.title}</h3>
                   {card.subtitle && (
-                    <p className="text-[16px] text-white mt-1">
+                    <p className=" text-[14px] md:text-[16px] text-white mt-1">
                       {card.subtitle}
                     </p>
                   )}

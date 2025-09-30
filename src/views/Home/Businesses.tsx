@@ -8,10 +8,10 @@ const Businesses = () => {
     <section className="w-full bg-white">
       <div className="main-container text-center">
         <div className="max-w-[970px] mx-auto">
-          <h2 className="text-[28px] sm:text-[36px] lg:text-[45px] font-semibold leading-tight lg:leading-[57px] capitalize text-[#0A1633]">
+          <h2 className="text-[18px] sm:text-3xl md:text-4xl lg:text-[45px] font-semibold leading-tight lg:leading-[57px] capitalize text-[#0A1633]">
             Why <span className="text-[#FF6B00]">Aussie Businesses</span> Back KMC
           </h2>
-          <p className="text-[16px] sm:text-[18px] font-normal leading-[24px] sm:leading-[30px] text-[#757575] mt-4">
+          <p className="text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-[24px] sm:leading-[30px] text-[#757575] mt-4">
             We’re not just another offshore provider—we’re a true partner who
             understands how Australians do business: straight-talking, reliable,
             and built for long-term success.
@@ -45,7 +45,7 @@ const Businesses = () => {
                   />
                 )}
               </div>
-              <h3 className="mt-4 text-[20px] sm:text-[24px] font-semibold">
+              <h3 className="mt-4   text-[18px] sm:text-[20px] lg:text-[24px] font-semibold">
                 <span className="text-[#FF6B00]">{item.title}</span>
                 {item.title1 && (
                   <span className="text-[#051636]">{item.title1}</span>

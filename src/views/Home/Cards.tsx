@@ -11,7 +11,7 @@ const Cards = () => {
 
           {/* Left Text Section */}
           <div className="flex flex-col gap-4 justify-center items-center sm:items-start max-w-[400px] text-center sm:text-start mx-auto sm:mx-0">
-            <h2 className="font-semibold text-[#051636] text-[24px] sm:text-[32px] md:text-[38px] lg:text-[45px] leading-[30px] sm:leading-[38px] md:leading-[46px] lg:leading-[56px]">
+            <h2 className="font-semibold text-[#051636] text-[18px] sm:text-3xl md:text-4xl lg:text-[45px] leading-[30px] sm:leading-[38px] md:leading-[46px] lg:leading-[56px]">
               Trusted By Top Employers <br />
               <span className="text-[#EE7A30]"> Across Asia- Pacific </span>
             </h2>
@@ -38,7 +38,7 @@ const Cards = () => {
                 />
               </div>
               <div className="flex flex-col gap-3 mt-auto">
-                <h3 className="font-[Be_Vietnam_Pro] font-semibold text-[20px] sm:text-[24px] md:text-[28px] leading-[26px] sm:leading-[30px] md:leading-[34px] capitalize text-orange-500 break-words">
+                <h3 className="font-[Be_Vietnam_Pro] font-semibold text-[18px] sm:text-[20px] md:text-[28px] leading-[26px] sm:leading-[30px] md:leading-[34px] capitalize text-orange-500 break-words">
                   {card.title}
                 </h3>
                 <p className="text-[14px] sm:text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] text-[#051636]">

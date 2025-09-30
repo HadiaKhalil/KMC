@@ -112,7 +112,7 @@ const Hero: React.FC = () => {
               <span className="text-[#EE7A30]"> Aussie Industries </span> That Are{" "}
               <span className="text-[#EE7A30]"> Scaling Fast</span>
             </h2>
-
+ 
             <p
               className="font-normal text-[#757575]   text-[14px] sm:text-[16px] md:text-[18px]
               leading-[22px] sm:leading-[26px] md:leading-[28px]"
