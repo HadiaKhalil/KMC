@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { whyKMCData } from "@/component/Data/Data";
 
-
 interface KMCDataItem {
   img: string;
   title: string;
@@ -32,7 +31,7 @@ const WhyKMC = () => {
         <h3 className="font-bold text-[18px] sm:text-[20px] lg:text-[24px] mb-2 leading-[30px]">
           {card.title}
         </h3>
-        <p className=" text-[14px] sm:text-[16px] text-[#6B717A] leading-[20px]">
+        <p className="text-[14px] sm:text-[16px] text-[#6B717A] leading-[20px]">
           {card.text}
         </p>
       </div>
@@ -42,15 +41,15 @@ const WhyKMC = () => {
   return (
     <div className="main-container px-4 sm:px-6 lg:px-0">
       <div className="w-full max-w-[1171px] mx-auto">
-
+    
         <div className="max-w-3xl mb-12 gap-[18px]">
-          <p className="text-orange-500 text-[14px] sm:text-[16px]  md:text-[18px] lg:text-[20px] font-semibold uppercase">
+          <p className="text-orange-500 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-semibold uppercase">
             Because offshore doesn’t have to feel… offshore
           </p>
           <h2 className="text-[32px] sm:text-3xl md:text-4xl lg:text-[55px] font-bold text-gray-900 mt-2 leading-tight">
             Why KMC?
           </h2>
-          <p className="text-gray-600 text-[14px] sm:text-[16px]  lg:text-[18px] mt-4">
+          <p className="text-gray-600 text-[14px] sm:text-[16px] lg:text-[18px] mt-4">
             Here’s the thing: most EORs are payroll platforms in disguise. Some slick
             UI, a support chatbot, and a call center in a faraway timezone. That’s not us.
             We’re real people, building real teams—for companies who care how their brand
@@ -59,11 +58,23 @@ const WhyKMC = () => {
         </div>
 
   
-        <div
-          className="
-            grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-x-10  gap-y-10 justify-items-center"
-        >
-          {allCards.map(renderCard)}
+        <div className="flex flex-wrap justify-center gap-x-10 gap-y-10 justify-items-center">
+       
+          <div className="flex flex-wrap justify-center gap-x-10 gap-y-10 w-full lg:hidden">
+            {allCards.map(renderCard)}
+          </div>
+
+         
+          <div className="hidden lg:flex lg:flex-col lg:items-center lg:gap-10">
+         
+            <div className="flex justify-center gap-10">
+              {allCards.slice(0, 3).map(renderCard)}
+            </div>
+            
+            <div className="flex justify-center gap-10">
+              {allCards.slice(3, 5).map(renderCard)}
+            </div>
+          </div>
         </div>
       </div>
     </div>
