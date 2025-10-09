@@ -1,138 +1,73 @@
 "use client";
-import React, { useState } from "react";
-import { sectionsData } from "@/component/Data/Data";
+
+import Image from "next/image";
+import React from "react";
 import Button from "@/component/Button/Button";
 
-type SectionID = string | number;
-
-interface IndustrySectionsProps {
-  openSections: SectionID[];
-  toggleSection: (id: SectionID) => void;
-}
-
-const IndustrySections: React.FC<IndustrySectionsProps> = ({ openSections, toggleSection }) => {
-  if (!Array.isArray(openSections) || typeof toggleSection !== "function") {
-    return null;
-  }
-
+export default function Hero() {
   return (
-    <div className="w-full max-w-[710px] h-auto flex flex-col gap-6 lg:gap-10">
-      {sectionsData.map((section) => {
-        const isOpen = openSections.includes(section.id);
+    <section className="relative bg-white">
+      <div className="main-container grid lg:grid-cols-12 gap-10 items-center mt-4 lg:mt-10">
+        {/* Left */}
+        <div className="lg:col-span-6 space-y-4 text-center lg:text-left">
+          {/* Heading */}
+          <h1 className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] font-semibold leading-[120%] text-[#051636] capitalize">
+            {`Build`}{" "}
+            <span className="text-[#EE7A30]">{`Your `}</span>{" "}
+            {`Offshore `} <span className="text-[#EE7A30]">{`Team.`}</span>{`The Easy Way.`}
+          </h1>
 
-        return (
-          <div
-            key={section.id}
-            className={`p-4 border-b border-[#E1E1E1] ${section.bg || ""} ${
-              section.rounded || ""
-            }`}
-          >
-         
-            <div
-              className="flex items-center justify-between cursor-pointer"
-              onClick={() => toggleSection(section.id)}
-            >
-              <div className="flex items-center gap-3">
-                <span className="flex items-center justify-center w-[44px] h-[44px] rounded-full">
-                  {React.cloneElement(section.icon, {
-                    className: "text-[#EE7A30]",
-                    size: 30,
-                    strokeWidth: 1.1,
-                  })}
-                </span>
-                <h2
-                  className="font-medium text-lg sm:text-xl lg:text-2xl leading-6 sm:leading-7 text-[#051636] max-w-[calc(100vw-120px)] lg:max-w-[580px]"
-                  style={{
-                    fontFamily: "'Be Vietnam Pro', sans-serif",
-                    verticalAlign: "middle",
-                    letterSpacing: "0",
-                  }}
-                >
-                  {section.title}
-                </h2>
-              </div>
-              <span className="text-2xl font-bold text-gray-500 select-none">
-                {isOpen ? "–" : "+"}
-              </span>
-            </div>
+          {/* Paragraphs */}
+          <p className="text-[#757575] text-[15px] sm:text-[16px] md:text-[18px] leading-relaxed max-w-[615px] mx-auto lg:mx-0">
+            {`Growing a business in Australia isn’t easy. Talent shortages, rising
+            overheads, and the pressure to scale fast can pull you in every
+            direction. That’s where we come in.`}
+          </p>
+          <p className="text-[#757575] text-[15px] sm:text-[16px] md:text-[18px] leading-relaxed max-w-[615px] mx-auto lg:mx-0">
+            {`KMC helps Aussie businesses build high-performing offshore teams in
+            the Philippines—without the hassle. You stay focused on running the
+            business. We take care of the rest: recruitment, HR, compliance,
+            payroll, offices, and more.`}
+          </p>
 
-            {/* Items */}
-            {isOpen && (
-              <div className="flex flex-wrap gap-3 mt-4 justify-start">
-                {section.items.map((item, idx) => (
-                  <span
-                    key={idx}
-                    className="flex items-center text-white bg-[#EE7A30] hover:bg-[#d96c2b] w-full sm:w-[215px] md:w-[200px] lg:w-[215.33px] h-[50px] gap-3 pr-5 pl-1 rounded-[30px] transition-colors duration-300"
-                  >
-                    <span className="flex items-center justify-center bg-white w-[44px] h-[44px] rounded-full">
-                      {React.cloneElement(item.icon, {
-                        className: "text-black",
-                        size: 34,
-                      
-                      })}
-                    </span>
-
-                    <span
-                      className="truncate capitalize text-white font-normal font-be-vietnam-pro"
-                      style={{ fontSize: "16px", lineHeight: "20px" }}
-                    >
-                      {item.label}
-                    </span>
-                  </span>
-                ))}
-              </div>
-            )}
+          <div className="flex justify-center lg:justify-start">
+            <Button className="mt-4">{`Book A Call`}</Button>
           </div>
-        );
-      })}
-    </div>
-  );
-};
-
-const Hero: React.FC = () => {
-  const [openSections, setOpenSections] = useState<SectionID[]>([sectionsData[0]?.id || 0]);
-
-  const toggleSection = (id: SectionID) => {
-    setOpenSections((prev) =>
-      prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
-    );
-  };
-
-  return (
-    <div className="main-container">
-      <section>
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8  mx-auto">
-     
-          <div className="w-full lg:w-[520px] flex flex-col gap-6 ">
-            <h2
-              className="font-semibold text-[32px] sm:text-3xl md:text-4xl lg:text-[45px] 
-                leading-[30px] sm:leading-[38px] md:leading-[46px] lg:leading-[56px] text-[#051636]"
-            >
-              Built For{" "}
-              <span className="text-[#EE7A30]"> Aussie Industries </span> That Are{" "}
-              <span className="text-[#EE7A30]"> Scaling Fast</span>
-            </h2>
- 
-            <p
-              className="font-normal text-[#757575]   text-[14px] sm:text-[16px] md:text-[18px]
-              leading-[22px] sm:leading-[26px] md:leading-[28px]"
-            >
-              {`Whether you’re running a digital agency, growing a retail brand, or streamlining back-office support—we’ll help you build the offshore team to get it done.`}
-            </p>
-
-            <Button
-              className="mt-3 text-sm md:text-base bg-[#EE7A30] hover:bg-[#d96c2b] text-white  sm:w-[248px] h-[50px] md:h-[60px]  rounded-[12px] font-medium flex items-center justify-center transition-all duration-300"
-            >
-              Explore More Industries
-            </Button>
-          </div>
-
-       
-          <IndustrySections openSections={openSections} toggleSection={toggleSection} />
         </div>
-      </section>
-    </div>
-  );
-};
 
-export default Hero;
+        {/* Right Content */}
+        <div className=" lg:col-span-6 relative flex justify-center my-4 lg:my-0">
+          {/* Main Rectangle */}
+          <div className="w-[90%] sm:w-[80%] md:w-[75%] lg:w-[450px] aspect-[9/11] rounded-[20px] sm:rounded-[25px] lg:rounded-[30px] overflow-hidden relative">
+            <Image
+              src="/image/Rectangle 88(1).png"
+              alt="Main team"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          {/* Circle Top Left */}
+          <div className="absolute -top-[-40px] -left-4  w-[25%] sm:w-[28%] md:w-[30%] lg:w-[195px] aspect-square rounded-full overflow-hidden shadow-md">
+            <Image
+              src="/image/Ellipse 2(1).png"
+              alt="Small circle 1"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          {/* Circle Bottom Right */}
+          <div className="absolute -bottom-[-50px] -right-4  w-[26%] sm:w-[30%] md:w-[32%] lg:w-[204px] aspect-square rounded-full  overflow-hidden shadow-md">
+            <Image
+              src="/image/Ellipse 3(1).png"
+              alt="Small circle 2"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

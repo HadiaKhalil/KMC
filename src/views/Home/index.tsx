@@ -3,10 +3,13 @@ import Layout from '@/component/Layout'
 import Hero from './Hero'
 import Cards from './Cards'
 import Businesses from './Businesses'
-import WhyKMC from './WhyKMC'
-import KmcDifference from './KmcDifference'
-import TalentStrategy from './TalentStrategy'
-import FAQSection from './FAQSection'
+import ClientSection from './ClientSection'
+import Bservices from './Bservices'
+import Officeroom from './Officeroom'
+import PartnerSection from './PartnerSection'
+import StartingFive from './StartingFive'
+import TeamWork from './TeamWork'
+
 
 
 const page = () => {
@@ -14,14 +17,16 @@ const page = () => {
 <Layout>
     
      <Hero />
+       <Businesses />
      <Cards />
-     <Businesses />
+<TeamWork />
+    <StartingFive />
+    <Officeroom />
+<ClientSection />
+<Bservices />
 
-     <WhyKMC />
-     <KmcDifference />
-      <TalentStrategy />
-      <FAQSection />
- 
+  <PartnerSection />
+
 </Layout>
 
   )
