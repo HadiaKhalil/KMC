@@ -3,14 +3,34 @@ import React, { useState } from "react";
 import { sectionsData } from "@/component/Data/Data";
 import Button from "@/component/Button/Button";
 
+// Define what a SectionID can be
 type SectionID = string | number;
 
+// If your data doesn’t already have strict typing, define it here
+interface SectionItem {
+  label: string;
+  icon: React.ReactElement;
+}
+
+interface Section {
+  id: SectionID;
+  title: string;
+  icon: React.ReactElement;
+  items: SectionItem[];
+  bg?: string;
+  rounded?: string;
+}
+
+// Props for IndustrySections
 interface IndustrySectionsProps {
   openSections: SectionID[];
   toggleSection: (id: SectionID) => void;
 }
 
-const IndustrySections: React.FC<IndustrySectionsProps> = ({ openSections, toggleSection }) => {
+const IndustrySections: React.FC<IndustrySectionsProps> = ({
+  openSections,
+  toggleSection,
+}) => {
   if (!Array.isArray(openSections) || typeof toggleSection !== "function") {
     return null;
   }
@@ -18,6 +38,9 @@ const IndustrySections: React.FC<IndustrySectionsProps> = ({ openSections, toggl
   return (
     <div className="w-full max-w-[710px] h-auto flex flex-col gap-6 lg:gap-10">
       {sectionsData.map((section) => {
+        // ✅ Skip any section that doesn’t have a valid ID
+        if (section.id === undefined || section.id === null) return null;
+
         const isOpen = openSections.includes(section.id);
 
         return (
@@ -27,7 +50,6 @@ const IndustrySections: React.FC<IndustrySectionsProps> = ({ openSections, toggl
               section.rounded || ""
             }`}
           >
-         
             <div
               className="flex items-center justify-between cursor-pointer"
               onClick={() => toggleSection(section.id)}
@@ -68,7 +90,6 @@ const IndustrySections: React.FC<IndustrySectionsProps> = ({ openSections, toggl
                       {React.cloneElement(item.icon, {
                         className: "text-black",
                         size: 34,
-                      
                       })}
                     </span>
 
@@ -90,7 +111,11 @@ const IndustrySections: React.FC<IndustrySectionsProps> = ({ openSections, toggl
 };
 
 const Bservices: React.FC = () => {
-  const [openSections, setOpenSections] = useState<SectionID[]>([sectionsData[0]?.id || 0]);
+  // ✅ Ensure fallback ID is a valid SectionID (use first valid section.id)
+  const initialId =
+    sectionsData.find((section) => section.id !== undefined)?.id ?? 0;
+
+  const [openSections, setOpenSections] = useState<SectionID[]>([initialId]);
 
   const toggleSection = (id: SectionID) => {
     setOpenSections((prev) =>
@@ -101,34 +126,33 @@ const Bservices: React.FC = () => {
   return (
     <div className="main-container">
       <section>
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8  mx-auto">
-     
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 mx-auto">
           <div className="w-full lg:w-[520px] flex flex-col gap-6 ">
             <h2
               className="font-semibold text-[32px] sm:text-3xl md:text-4xl lg:text-[45px] 
                 leading-[30px] sm:leading-[38px] md:leading-[46px] lg:leading-[56px] text-[#051636]"
             >
               Built For{" "}
-              <span className="text-[#EE7A30]"> Aussie Industries </span> That Are{" "}
-              <span className="text-[#EE7A30]"> Scaling Fast</span>
+              <span className="text-[#EE7A30]"> Aussie Industries </span> That
+              Are <span className="text-[#EE7A30]"> Scaling Fast</span>
             </h2>
- 
+
             <p
-              className="font-normal text-[#757575]   text-[14px] sm:text-[16px] md:text-[18px]
+              className="font-normal text-[#757575] text-[14px] sm:text-[16px] md:text-[18px]
               leading-[22px] sm:leading-[26px] md:leading-[28px]"
             >
               {`Whether you’re running a digital agency, growing a retail brand, or streamlining back-office support—we’ll help you build the offshore team to get it done.`}
             </p>
 
-            <Button
-              className="mt-3 text-sm md:text-base bg-[#EE7A30] hover:bg-[#d96c2b] text-white  sm:w-[248px] h-[50px] md:h-[60px]  rounded-[12px] font-medium flex items-center justify-center transition-all duration-300"
-            >
+            <Button className="mt-3 text-sm md:text-base bg-[#EE7A30] hover:bg-[#d96c2b] text-white sm:w-[248px] h-[50px] md:h-[60px] rounded-[12px] font-medium flex items-center justify-center transition-all duration-300">
               Explore More Industries
             </Button>
           </div>
 
-       
-          <IndustrySections openSections={openSections} toggleSection={toggleSection} />
+          <IndustrySections
+            openSections={openSections}
+            toggleSection={toggleSection}
+          />
         </div>
       </section>
     </div>
