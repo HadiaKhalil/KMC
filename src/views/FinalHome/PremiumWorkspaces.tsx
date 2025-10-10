@@ -5,7 +5,7 @@ import React from "react";
 export default function PremiumWorkspaces() {
   return (
     <section className="bg-white lg:pb-20 pb-4">
-      <div className="maincontainer mx-auto text-center max-w-[970px]">
+      <div className="main-container mx-auto text-center max-w-[970px]">
         
    
         <p className="inline-block text-[#FF7200] font-bold uppercase tracking-wide 

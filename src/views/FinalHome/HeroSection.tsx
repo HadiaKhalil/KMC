@@ -5,7 +5,7 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-white overflow-hidden pt-6 lg:pb-16 pb-8">
+    <section className="relative bg-white overflow-hidden">
       <div className="main-container mx-auto flex flex-col lg:flex-row items-center lg:text-left text-center px-6 lg:px-16">
         
         

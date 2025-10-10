@@ -6,7 +6,7 @@ export default function TalentStrategy() {
  
   return (
     <div className="main-container ">
-      <div className="w-full max-w-[1171px] mx-auto">
+      <div className="w-full mx-auto">
         <div className=" sm:text-start text-center">
       
           <h4 className="text-[#FF7200]  text-[18px] md:text-[20px] font-bold uppercase tracking-widest">

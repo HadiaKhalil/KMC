@@ -12,7 +12,7 @@ export default function LocationSection() {
       className="relative w-full h-[800px] bg-cover bg-center"
       style={{ backgroundImage: "url('/image/Background Image(1).png')" }}
     >
-      <div className="maincontainer mx-auto flex flex-col items-center h-full">
+      <div className="main-container mx-auto flex flex-col items-center h-full">
       
         <div className="flex gap-3 bg-white rounded-2xl p-2 shadow-md -mt-8">
           {locations.map((location, index) => (

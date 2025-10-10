@@ -39,7 +39,7 @@ export default function TeamSpaces() {
 
   return (
     <section className="relative bg-white py-20  ">
-      <div className="maincontainer mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 relative z-10">
+      <div className="main-container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 relative z-10">
 
         <div className="lg:text-left text-center">
           <h2 className="text-[#001738] font-semibold text-[32px] sm:text-[45px] lg:text-[55px] md:leading-[62px]">

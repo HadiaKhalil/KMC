@@ -6,8 +6,8 @@ import { partnerSolutionsData } from "@/component/Data/Data"
 
 export default function PartnerSolution() {
   return (
-    <section className="bg-white py-12">
-      <div className="maincontainer mx-auto">
+    <section className="bg-white">
+      <div className="main-container mx-auto">
      
         <p className="text-[#FF7200] font-bold uppercase tracking-wide text-[16px] sm:text-[20px] lg:text-left text-center">
           {`  Everything Under One Roof. Literally.`}

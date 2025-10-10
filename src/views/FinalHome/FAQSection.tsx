@@ -13,7 +13,7 @@ export default function FAQSection() {
   return (
     <div className="bg-[#FFFAF5]">
       <div className="main-container ">
-        <div className='w-full max-w-[1171px] mx-auto'>
+        <div className='w-full mx-auto'>
 <div className="flex lg:flex-row flex-col gap-10 items-start">
           {/* Left Column */}
           <div className="lg:w-1/2 mt-8">

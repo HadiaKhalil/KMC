@@ -18,8 +18,8 @@ export default function TransformBusiness() {
   );
 
   return (
-    <section className="py-16 px-6">
-      <div className="maincontainer mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+    <section className="">
+      <div className="main-container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
         
       
         <div>

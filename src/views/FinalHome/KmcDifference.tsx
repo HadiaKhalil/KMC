@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const KmcDifference = () => {
   return (
-    <div className="bg-white">
-      <div className="main-container">
-        <div className="mx-auto space-y-16 max-w-[1171px]">
+    <div className="bg-white ">
+      <div className="main-container ">
+        <div className="mx-auto">
         
           <div className="grid lg:grid-cols-2 gap-10 items-start">
          
@@ -79,7 +79,7 @@ const KmcDifference = () => {
           </div>
 
          
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-10 text-center">
   <div>
     <p className=" text-[18px] sm:text-3xl md:text-4xl lg:text-[79px] text-[#001738]">30-45</p>
     <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[24px] text-[#6B717A]">DAYS TO FIRST HIRE</p>

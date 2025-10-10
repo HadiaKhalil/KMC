@@ -7,7 +7,7 @@ import { securityBoxes } from "@/component/Data/Data";
 export default function SecuritySection() {
   return (
     <section className="relative w-full bg-[#FFFAF5F2] py-12 md:py-20 lg:py-[100px] lg:mt-[80px]  pb-20">
-      <div className="maincontainer px-4 sm:px-6 md:px-10 lg:px-[135px]">
+      <div className="main-container px-4 sm:px-6 md:px-10 lg:px-[135px]">
         {/* Header */}
             <div className="lg:text-left text-center">
                       <p className="text-[#FF7200] font-bold text-base sm:text-lg md:text-[20px] uppercase tracking-wide">

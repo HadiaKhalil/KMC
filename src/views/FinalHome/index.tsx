@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Layout } from "lucide-react"
+
 import CustomerSuccess from "./CustomerSuccess"
 import Excellence from "./Excellence"
 import FAQSection from "./FAQSection"
@@ -26,7 +26,8 @@ import WhyKMC from "./WhyKMC"
 const FinalHome = ({ }) => {
   return (
   
-<Layout >
+<>
+
     <HeroSection/>
      <PartnerSolution />
      <PricingSection />
@@ -43,9 +44,7 @@ const FinalHome = ({ }) => {
      <Excellence />
          <FAQSection />
      <TransformBusiness />
-    
- 
- </Layout>
+  </>
       
   )
 }

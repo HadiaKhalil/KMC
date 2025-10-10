@@ -22,7 +22,7 @@ export default function TeamWork() {
 
   return (
     <div className="main-container">
-      <div className="sm:my-14 my-6 mx-auto">
+      <div className=" mx-auto">
         {/* Heading */}
         <div className="text-center max-w-5xl mx-auto sm:mb-12 mb-6">
           <h2 className="text-3xl sm:text-4xl md:text-[40px] lg:text-[45px] font-semibold font-beVietnam leading-snug">
@@ -59,7 +59,7 @@ export default function TeamWork() {
         </div>
 
         {/* Button */}
-        <div className="text-center mt-10">
+        <div className="text-center justify-center flex mt-10 items-center">
           <Button>{`Explore Our Full-Service Offering`}</Button>
         </div>
       </div>

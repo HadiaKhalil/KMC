@@ -6,7 +6,7 @@ import { PartnerCards } from "@/component/Data/Data";
 export default function SectionPartnerCards() {
   return (
     <section className="bg-white py-12 sm:py-16 lg:py-20">
-      <div className="maincontainer mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="main-container mx-auto ">
      
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
       

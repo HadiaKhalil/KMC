@@ -9,7 +9,7 @@ export default function PricingSection() {
     pricingData;
 
   return (
-    <div className="maincontainer">
+    <div className="main-container">
       <div className="relative bg-[#001738] rounded-[30px] shadow-lg overflow-hidden px-4 sm:px-6 lg:px-12 py-12 lg:py-2 hover:border-r-8 hover:border-b-10 hover:border-[#f1c097]">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 lg:gap-10">
           {/* Left Content */}

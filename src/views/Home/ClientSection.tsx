@@ -6,7 +6,7 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 export default function ClientSection() {
   return (
-    <section className="w-full bg-gradient-to-b from-white to-[#f8fbff] py-16 font-beVietnam">
+    <section className="w-full bg-gradient-to-b from-white to-[#f8fbff]  font-beVietnam">
       <div className="main-container mx-auto px-6 lg:px-12">
         {/* Heading  */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between mb-12">

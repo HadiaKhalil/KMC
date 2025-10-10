@@ -17,7 +17,7 @@ const WhyKMC = () => {
       className={`relative rounded-[20px] border hover:bg-[#0A1A2F] hover:text-white border-[#D6DCE3] p-2 ${
         card.dark ? "hover:bg-[#0A1A2F] hover:text-white" : "bg-white"
       }`}
-      style={{ width: "100%", maxWidth: "370px" }}
+      style={{ width: "100%",  }}
     >
       <div className="w-full h-[450px] relative overflow-hidden rounded-[16px]">
         <Image
@@ -40,7 +40,7 @@ const WhyKMC = () => {
 
   return (
     <div className="main-container ">
-      <div className="w-full max-w-[1171px] mx-auto">
+      <div className="w-full  mx-auto">
     
         <div className="max-w-3xl mb-12 gap-[18px]">
           <p className="text-[#EE7A30] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-semibold uppercase">
