@@ -7,7 +7,7 @@ import Button from "@/component/Button/Button";
 export default function Hero() {
   return (
     <section className="relative bg-white">
-      <div className="main-container grid lg:grid-cols-12 gap-10 items-center mt-4 lg:mt-6">
+      <div className="main-container grid lg:grid-cols-12 gap-10 items-center">
         {/* Left */}
         <div className="lg:col-span-6 space-y-4 text-center lg:text-left">
           {/* Heading */}
