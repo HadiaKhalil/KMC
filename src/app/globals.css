@@ -33,7 +33,7 @@ body{
 }
 .main-container{
   @apply max-w-[1440px] mx-auto
-  md:px-14 px-7 py-10
+  md:px-14 px-7 py-6
 }
 
 
