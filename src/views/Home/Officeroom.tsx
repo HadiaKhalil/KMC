@@ -7,10 +7,10 @@ import { images } from "@/component/Data/Data";
 
 export default function Officeroom() {
   return (
-    <section className="main-container bg-white py-6 sm:py-10">
+    <section className="main-container bg-white mt-3">
       {/* Heading */}
       <div className="text-center mb-10 sm:mb-12">
-        <h2 className="text-3xl sm:text-4xl md:text-[40px] lg:text-[45px] font-semibold leading-snug">
+        <h2 className="text-3xl sm:text-4xl md:text-[40px] lg:text-[45px] font-semibold mt-2 leading-snug">
           <span className="text-[#051636]">Where </span>
           <span className="text-[#EE7A30] font-normal">Great Teams</span>
           <br />

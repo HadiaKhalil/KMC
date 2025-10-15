@@ -2,14 +2,10 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import {
-  MdPlayArrow,
-  MdKeyboardArrowLeft,
-  MdKeyboardArrowRight,
-} from "react-icons/md";
+import { MdPlayArrow, MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function ClientSection() {
-  // 👇 Combined array for full client info (heading, desc, and image)
   const clients = [
     {
       heading: "What Our Clients Say",
@@ -33,11 +29,10 @@ export default function ClientSection() {
         "Our clients trust us because we deliver results that help them grow with confidence.",
       name: "Daniel R.",
       position: "Project Manager, Brisbane",
-       image: "/images/image01 (2).png",
+      image: "/images/image01 (2).png",
     },
   ];
 
-  // 👇 Single index to control everything (heading + p + image)
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -51,27 +46,39 @@ export default function ClientSection() {
   const currentClient = clients[currentIndex];
 
   return (
-    <section className="w-full bg-gradient-to-b from-white to-[#f8fbff] py-16 font-beVietnam">
-      <div className="maincontainer mx-auto px-6 lg:px-12">
+    <div className="main-container">
+ <div className="w-full  bg-gradient-to-b from-white to-[#f8fbff]  font-beVietnam">
+      <div className="  ">
         {/* Header */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between mb-12">
-          <div className="max-w-2xl text-center lg:text-left transition-all duration-500">
-            {/* 👇 Dynamic Heading */}
-            <h2 className="text-3xl sm:text-4xl md:text-[40px] lg:text-[45px] leading-[110%] font-semibold">
-              <span className="text-[#051636]">
-                {currentClient.heading.split(" ")[0]}{" "}
-              </span>
-              <span className="text-[#EE7A30] font-normal">
-                {currentClient.heading.split(" ").slice(1).join(" ")}
-              </span>
-            </h2>
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between ">
+          <div
+            className="max-w-2xl text-center lg:text-left min-h-[180px] flex flex-col justify-center"
+          >
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentClient.heading}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-3xl sm:text-4xl md:text-[40px] lg:text-[45px] leading-[110%] font-semibold">
+                  <span className="text-[#051636]">
+                    {currentClient.heading.split(" ")[0]}{" "}
+                  </span>
+                  <span className="text-[#EE7A30] font-normal">
+                    {currentClient.heading.split(" ").slice(1).join(" ")}
+                  </span>
+                </h2>
 
-            <p className="text-[#757575] text-[15px] sm:text-[16px] lg:text-[18px] leading-[26px] mt-4 transition-all duration-500">
-              {currentClient.description}
-            </p>
+                <p className="text-[#757575] text-[15px] sm:text-[16px] lg:text-[18px] leading-[26px] mt-4">
+                  {currentClient.description}
+                </p>
+              </motion.div>
+            </AnimatePresence>
           </div>
 
-          {/* Arrows (control all content) */}
+          {/* Arrows */}
           <div className="flex items-center space-x-4 mt-6 lg:mt-16 justify-center lg:justify-end w-full lg:w-auto">
             <button
               onClick={handlePrev}
@@ -89,15 +96,25 @@ export default function ClientSection() {
         </div>
 
         {/* Image Section */}
-        <div className="relative mx-auto max-w-[1260px] h-[350px] sm:h-[500px] md:h-[600px] lg:h-[650px] rounded-[30px] overflow-hidden transition-all duration-500">
-          <Image
-            key={currentClient.image}
-            src={currentClient.image}
-            alt={currentClient.name}
-            fill
-            className="object-cover transition-all duration-700"
-            priority
-          />
+        <div className="relative mx-auto h-[350px] sm:h-[500px] md:h-[600px] lg:h-[650px] rounded-[30px] overflow-hidden transition-all duration-500">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentClient.image}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={currentClient.image}
+                alt={currentClient.name}
+                fill
+                className="object-cover"
+                priority
+              />
+            </motion.div>
+          </AnimatePresence>
 
           {/* Play Button */}
           <button className="absolute inset-0 flex items-center justify-center">
@@ -112,7 +129,7 @@ export default function ClientSection() {
           </button>
 
           {/* Text Overlay */}
-          <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row items-center sm:items-end justify-center sm:justify-between text-white transition-all duration-500">
+          <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row items-center sm:items-end justify-center sm:justify-between text-white">
             <div className="text-center sm:text-left">
               <h3 className="text-[22px] sm:text-[26px] md:text-[32px] font-semibold leading-[100%]">
                 {currentClient.name}
@@ -140,6 +157,8 @@ export default function ClientSection() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    </div>
+   
   );
 }

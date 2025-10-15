@@ -126,7 +126,7 @@ const Bservices: React.FC = () => {
   return (
     <div className="main-container">
       <section>
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 mx-auto">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 mx-auto mt-6">
           <div className="w-full lg:w-[520px] flex flex-col gap-6 ">
             <h2
               className="font-semibold text-[32px] sm:text-3xl md:text-4xl lg:text-[45px] 

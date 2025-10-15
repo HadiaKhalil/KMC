@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-white top-0 left-0 z-50 font-['DM_Sans']">
-      <div className="maincontainer mx-auto flex items-center justify-between py-6 px-6 lg:px-12">
+      <div className="main-container mx-auto flex items-center justify-between py-6 px-6 lg:px-12">
 
         {/* ✅ Logo always links to home */}
         <Link href="/" className="flex items-center">
