@@ -1,3 +1,33 @@
+// src/component/Data/ClientData.js
+
+export const clients = [
+  {
+    heading: "What Our Clients Say",
+    description:
+      "Don’t take our word for it—see it for yourself. We’ve helped hundreds of Aussie businesses scale with offshore teams that actually work.",
+    name: "James W.",
+    position: "Head of Operations, Melbourne",
+   image: "/image/Rectangle 63(1).png"
+  },
+  {
+    heading: "Real Stories from Our Clients",
+    description:
+      "We value our partnerships. Our offshore teams empower businesses to achieve more in less time.",
+    name: "Sarah L.",
+    position: "HR Director, Sydney",
+    image: "/images/image01 (1).png",
+  },
+  {
+    heading: "See What Businesses Think",
+    description:
+      "Our clients trust us because we deliver results that help them grow with confidence.",
+    name: "Daniel R.",
+    position: "Project Manager, Brisbane",
+    image: "/images/image01 (2).png",
+  },
+];
+
+
 const cardData = [
   {
     Image: "/images/Frame.png",
