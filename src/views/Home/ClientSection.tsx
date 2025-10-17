@@ -28,7 +28,7 @@ export default function ClientSection() {
   return (
     <>
       <section className="w-full bg-gradient-to-b from-white to-[#f8fbff] py-16 font-beVietnam">
-        <div className="maincontainer mx-auto px-6 lg:px-12">
+        <div className="main-container mx-auto px-6 lg:px-12">
           {/* Heading + Arrows */}
           <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between mb-12">
             <div className="max-w-2xl text-center lg:text-left transition-all duration-500">
