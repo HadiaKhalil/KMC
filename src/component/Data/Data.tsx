@@ -1,13 +1,13 @@
 // src/component/Data/ClientData.js
-
-export const clients = [
+ 
+export const clientsData = [
   {
     heading: "What Our Clients Say",
     description:
       "Don’t take our word for it—see it for yourself. We’ve helped hundreds of Aussie businesses scale with offshore teams that actually work.",
     name: "James W.",
     position: "Head of Operations, Melbourne",
-   image: "/image/Rectangle 63(1).png"
+    image: "/image/Rectangle 63(1).png",
   },
   {
     heading: "Real Stories from Our Clients",
@@ -26,6 +26,7 @@ export const clients = [
     image: "/images/image01 (2).png",
   },
 ];
+
 
 
 const cardData = [

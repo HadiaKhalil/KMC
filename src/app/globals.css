@@ -44,6 +44,20 @@ body{
 
 
 
+  .swiper-pagination {
+          left: 550px !important; 
+          
+        }
+        .swiper-pagination-bullet {
+          background: #f8fbff !important; 
+        
+        }
+        .swiper-pagination-bullet-active {
+          background: #ee7a30 !important;
+          opacity: 1;
+        }
+
+
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
 
 .font-\[Be_Vietnam_Pro\] {
